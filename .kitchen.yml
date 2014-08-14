@@ -3,6 +3,8 @@ driver:
   name: vagrant
   box: g5-nodejs
   box_url: http://files.vagrantup.com/precise64.box
+  customize:
+    memory: 2048
 
 provisioner:
   name: chef_solo
