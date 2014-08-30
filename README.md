@@ -45,6 +45,10 @@ cookbook 'g5-nodejs', git: 'git@github.com:G5/g5-nodejs.git', tag: '0.1.0'
 
 ### Attributes ###
 
+* `node['nodejs']['npm']['prefix']` - the
+  [prefix directory](https://www.npmjs.org/doc/files/npm-folders.html#prefix-configuration)
+  where global npm packages will be installed.
+
 See the wrapped [nodejs cookbook](https://github.com/redguide/nodejs) for
 supported attributes.
 
