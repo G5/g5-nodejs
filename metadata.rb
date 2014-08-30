@@ -1,6 +1,6 @@
 name 'g5-nodejs'
 description 'G5 wrapper cookbook for installing nodejs'
-version '0.0.1'
+version '0.1.1'
 maintainer 'G5'
 license 'MIT'
 
