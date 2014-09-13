@@ -22,6 +22,10 @@ nodejs_npm 'bower' do
   group 'vagrant'
 end
 
+nodejs_npm 'grunt-cli' do
+  group 'vagrant'
+end
+
 execute 'Set prefix directory group permissions' do
   command "chmod -R 2775 #{node['nodejs']['npm']['prefix']}"
 end

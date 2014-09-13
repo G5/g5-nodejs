@@ -15,6 +15,10 @@ describe 'g5-nodejs::default' do
     expect(chef_run).to install_nodejs_npm('bower')
   end
 
+  it 'installs the grunt-cli node package' do
+    expect(chef_run).to install_nodejs_npm('grunt-cli')
+  end
+
   context 'with default prefix' do
     it 'configures the npm prefix' do
       expect(chef_run).to run_execute("npm config set prefix /home/vagrant/.node --global")
