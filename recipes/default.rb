@@ -14,16 +14,10 @@ template '/etc/profile.d/npm.sh' do
   )
 end
 
-nodejs_npm 'ember-cli' do
-  group 'vagrant'
-end
-
-nodejs_npm 'bower' do
-  group 'vagrant'
-end
-
-nodejs_npm 'grunt-cli' do
-  group 'vagrant'
+%w{ember-cli bower grunt-cli}.each do |pkg|
+  nodejs_npm pkg do
+    group 'vagrant'
+  end
 end
 
 execute 'Set prefix directory group permissions' do
